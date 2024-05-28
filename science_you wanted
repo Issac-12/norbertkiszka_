@@ -1,0 +1,52 @@
+Force Required for a Turn
+Lift Force Required:
+
+During a turn, the aircraft needs additional lift because the lift vector tilts with the bank of the aircraft. The formula to calculate the required lift 
+𝐿
+L in a level turn is:
+scss
+Copy code
+L = (m * v^2 / r) / cos(theta)
+where 
+𝑚
+m is the mass of the aircraft, 
+𝑣
+v is the velocity, 
+𝑟
+r is the radius of the turn, and 
+𝜃
+θ is the bank angle. For a typical moderate bank angle of 30 degrees, which is approximately 0.866.
+Assuming Flight Parameters:
+
+Velocity (
+𝑣
+v): 100 m/s (about 360 km/h, typical for this type of aircraft)
+Radius of the turn (
+𝑟
+r): 1,000 meters (1 km)
+Bank angle (
+𝜃
+θ): 30 degrees
+Calculation:
+
+Plugging the values into the formula:
+makefile
+Copy code
+L = (5670 * 100^2 / 1000) / 0.866
+makefile
+Copy code
+L = (5670 * 10000 / 1000) / 0.866
+makefile
+Copy code
+L = (5670 * 10) / 0.866
+makefile
+Copy code
+L = 56700 / 0.866
+makefile
+Copy code
+L = 65520 Newtons (approximately)
+Human Bone Strength
+The human radius bone can withstand forces of up to about 2,500 Newtons before it risks fracturing.
+Comparison
+The calculated force of 65,520 Newtons required to turn the aircraft is vastly greater than the 2,500 Newtons that human bone can withstand. This illustrates that the forces involved in maneuvering an aircraft are orders of magnitude beyond what any human could exert or withstand, underscoring the reliance on mechanical systems for aircraft control.
+This calculation highlights how specialized and robust the design of aircraft control systems must be to handle such significant aerodynamic forces, far beyond the capability of human physical strength.
